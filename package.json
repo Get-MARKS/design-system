@@ -1,0 +1,17 @@
+{
+	"version": "1.0.0",
+	"main": "index.js",
+	"name": "@mathongo/design-system",
+	"description": "Design system for mathongo web application",
+	"repository": "https://github.com/Get-MARKS/design-system.git",
+	"author": "satyamskillz <satyamskillz@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"mathongo",
+		"getmarks",
+		"system design"
+	]
+}
