@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"version": "1.0.0",
-	"main": "src/index.js",
+	"main": "library/index.js",
 	"name": "@mathongo/design-system",
 	"description": "Design system for mathongo web application",
 	"repository": "https://github.com/Get-MARKS/design-system.git",
