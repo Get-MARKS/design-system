@@ -11,18 +11,43 @@ type StateColors = {
         bg: string,
         color: string
     };
+    pressed: {
+        bg: string,
+        color: string
+    };
+    focused: {
+        bg: string,
+        color: string
+    };
+    disabled: {
+        bg: string,
+        color: string
+    };
 }
 
 const variables: {[key in ButtonVarient]: StateColors} = {
     primary: {
         regular: {
-            bg:'#d93848',
+            bg:'#2F86FF',
             color: "white"
         },
         hover: {
-            bg: '#eb4d5d',
-            color: "black"
+            bg: '#3479E9',
+            color: "white"
         },
+        pressed: {
+            bg: '#91C3FD',
+            color: "white"
+        },
+        focused: {
+            bg: "#2F86FF",
+            color: "white"
+        },
+        disabled: {
+            bg: "#E1E7EF",
+            color: "white"
+        }
+
     },
     secondary: {
         regular: {
@@ -33,6 +58,18 @@ const variables: {[key in ButtonVarient]: StateColors} = {
             bg: '#dbdbdb',
             color: "black"
         },
+        pressed: {
+            bg: '#91C3FD',
+            color: "white"
+        },
+        focused: {
+            bg: "#2F86FF",
+            color: "white"
+        },
+        disabled: {
+            bg: "#E1E7EF",
+            color: "white"
+        }
     },
     ternary: {
         regular: {
@@ -43,6 +80,18 @@ const variables: {[key in ButtonVarient]: StateColors} = {
             bg: '#3d3d3d',
             color: "#000"
         },
+        pressed: {
+            bg: '#91C3FD',
+            color: "white"
+        },
+        focused: {
+            bg: "#2F86FF",
+            color: "white"
+        },
+        disabled: {
+            bg: "#E1E7EF",
+            color: "white"
+        }
     }
 };
 
@@ -70,23 +119,31 @@ export const StyledButton = styled.button<StyledButtonProps>`
     color: ${ pr => variables[pr.varient].regular.color};
     padding: 0 ${ pr => ButtonPadding[pr.size]}px;
     height: ${ pr => Buttonheights[pr.size]}px;
-    ${ pr => pr.disabled ? `
-        background-color: #a6a6a6;
-        color: #5e5e5e;
-        cursor: not-allowed;
-
-        &:hover {
-            background-color: #a6a6a6 !important;
-            color: #5e5e5e !important;
-        }
-    ` : ''}
-    border-radius: 0;
+    border-radius: 8px;
     outline: none;
+
+    &:disabled{
+        cursor: not-allowed;
+        color: ${ (pr) => variables[pr.varient].pressed.color };
+        background-color: ${ (pr) => variables[pr.varient].disabled.bg };
+
+        &:hover{
+            color: ${ (pr) => variables[pr.varient].pressed.color };
+            background-color: ${ (pr) => variables[pr.varient].disabled.bg };
+        }
+    }
+
+    &:pressed{
+        color: ${ (pr) => variables[pr.varient].pressed.color };
+        background-color: ${ (pr) => variables[pr.varient].pressed.bg };
+    }
 
     &:focus {
         box-shadow: 0 0 0 1px #fff, 0 0 0 2px ${ (pr) => variables[pr.varient].regular.bg };
     }
+
     &:hover {
+        color: ${ (pr) => variables[pr.varient].hover.color };
         background-color: ${ (pr) => variables[pr.varient].hover.bg };
     }
 `;
