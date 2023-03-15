@@ -1,90 +1,57 @@
 {
-	"private": true,
 	"license": "MIT",
 	"version": "1.0.0",
 	"name": "@mathongo/design-system",
 	"description": "Design system for mathongo web application",
 	"repository": "https://github.com/Get-MARKS/design-system.git",
 	"author": "satyamskillz <satyamskillz@gmail.com>",
-	"types": "library/index.d.ts",
-	"main": "library/index.js",
-	"files": [
-		"library/**/*"
-	],
 	"scripts": {
-		"build": "tsc",
-		"test": "react-scripts test",
-		"start": "react-scripts start",
-		"eject": "react-scripts eject",
-		"build-storybook": "build-storybook",
-		"storybook": "start-storybook -p 6006"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		],
-		"overrides": [
-			{
-				"files": [
-					"**/*.stories.*"
-				],
-				"rules": {
-					"import/no-anonymous-default-export": "off"
-				}
-			}
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"peerDependencies": {
-		"react": "*",
-		"react-dom": "*"
+		"test": "jest",
+		"rollup": "rollup -c",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
 	},
 	"devDependencies": {
-		"@storybook/addon-actions": "^6.5.16",
-		"@storybook/addon-essentials": "^6.5.16",
-		"@storybook/addon-interactions": "^6.5.16",
-		"@storybook/addon-links": "^6.5.16",
-		"@storybook/builder-webpack5": "^6.5.16",
-		"@storybook/cli": "^6.5.16",
-		"@storybook/manager-webpack5": "^6.5.16",
-		"@storybook/node-logger": "^6.5.16",
-		"@storybook/preset-create-react-app": "^4.1.2",
-		"@storybook/react": "^6.5.16",
-		"@storybook/testing-library": "^0.0.13",
-		"@testing-library/jest-dom": "^5.14.1",
-		"@testing-library/react": "^13.0.0",
-		"@testing-library/user-event": "^13.2.1",
-		"@types/jest": "^27.0.1",
-		"@types/node": "^16.7.13",
-		"@types/react": "^18.0.0",
-		"@types/react-dom": "^18.0.0",
-		"@types/styled-components": "^5.1.26",
-		"babel-plugin-named-exports-order": "^0.0.2",
-		"prop-types": "^15.8.1",
+		"@babel/core": "^7.16.0",
+		"@babel/preset-env": "^7.16.4",
+		"@babel/preset-react": "^7.16.0",
+		"@babel/preset-typescript": "^7.16.0",
+		"@mdx-js/react": "^2.1.2",
+		"@rollup/plugin-commonjs": "^21.0.1",
+		"@rollup/plugin-node-resolve": "^13.0.6",
+		"@rollup/plugin-typescript": "^8.3.0",
+		"@storybook/addon-actions": "^6.5.9",
+		"@storybook/addon-essentials": "^6.5.9",
+		"@storybook/addon-links": "^6.5.9",
+		"@storybook/builder-webpack5": "^6.5.9",
+		"@storybook/manager-webpack5": "^6.5.9",
+		"@storybook/preset-scss": "^1.0.3",
+		"@storybook/react": "^6.5.9",
+		"@testing-library/react": "^13.3.0",
+		"@types/jest": "^28.1.6",
+		"@types/react": "^18.0.15",
+		"babel-jest": "^27.3.1",
+		"babel-loader": "^8.2.3",
+		"css-loader": "^6.7.3",
+		"html-webpack-plugin": "^5.5.0",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^28.1.3",
+		"postcss": "^8.4.21",
+		"postcss-import": "^15.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-scripts": "5.0.1",
-		"typescript": "^4.4.2",
-		"webpack": "^5.76.0"
+		"rollup": "^2.60.0",
+		"rollup-plugin-dts": "^4.0.1",
+		"rollup-plugin-postcss": "^4.0.2",
+		"sass": "^1.59.3",
+		"sass-loader": "^13.2.0",
+		"style-loader": "^3.3.2",
+		"typescript": "^4.7.4"
 	},
-	"keywords": [
-		"mathongo",
-		"getmarks",
-		"system design"
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"files": [
+		"dist"
 	],
-	"dependencies": {
-		"styled-components": "^5.3.9"
-	}
+	"types": "dist/esm/types/index.d.ts"
 }
