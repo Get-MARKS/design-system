@@ -8,8 +8,9 @@
 	"scripts": {
 		"test": "jest",
 		"rollup": "rollup -c",
+		"build-storybook": "build-storybook",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"generate": "node ./util/createComponent"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.16.0",
