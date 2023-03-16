@@ -10,7 +10,8 @@
 		"rollup": "rollup -c",
 		"build-storybook": "build-storybook",
 		"storybook": "start-storybook -p 6006",
-		"generate": "node ./util/createComponent"
+		"generate": "node ./util/createComponent",
+		"serve-storybook": "serve storybook-static"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.16.0",
