@@ -1,12 +1,33 @@
+// Generated with util/createComponent.js
 import React from "react";
+
+import { ButtonProps } from "./Button.types";
+
 import "./Button.scss";
 
-export interface ButtonProps {
-	label: string;
-}
+const Button: React.ForwardRefRenderFunction<unknown, ButtonProps> = (props, ref) => {
+	const {
+		children,
+		disabled,
+		className = "",
+		type = "primary",
+		size = "default",
+		loading = false,
+	} = props;
 
-const Button = (props: ButtonProps) => {
-	return <button type="button">{props.label}</button>;
+	return (
+		<button
+			type="button"
+			data-type={type}
+			data-size={size}
+			disabled={disabled}
+			data-loading={loading}
+			className={`ds__Button ${className}`}
+			ref={ref as React.MutableRefObject<HTMLButtonElement>}
+		>
+			{children}
+		</button>
+	);
 };
 
-export default Button;
+export default React.forwardRef<unknown, ButtonProps>(Button);

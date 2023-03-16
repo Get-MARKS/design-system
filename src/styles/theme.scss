@@ -1,0 +1,49 @@
+:root {
+	--round-xs: 2px;
+	--round-s: 4px;
+	--round-m: 8px;
+	--round-l: 12px;
+	--round-xl: 16px;
+	--round-xxl: 20px;
+
+	--padding-xxs: 2px;
+	--padding-xs: 4px;
+	--padding-s: 8px;
+	--padding-m: 12px;
+	--padding-l: 16px;
+	--padding-xl: 20px;
+	--padding-xxl: 24px;
+
+	--text-xxs: 10px;
+	--text-xs: 12px;
+	--text-s: 14px;
+	--text-m: 16px;
+	--text-l: 18px;
+	--text-xl: 20px;
+	--text-xxl: 24px;
+
+	--primary-bg: #eee;
+	--secondary-bg: #ddd;
+	--ternary-bg: #ccc;
+
+	--primary-text: #111;
+	--secondary-text: #333;
+	--ternary-text: #555;
+
+	--primary-color: blue;
+	--secondary-color: green;
+	--ternary-color: yellow;
+	--danger-color: red;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-bg: #111;
+		--secondary-bg: #222;
+		--ternary-bg: #333;
+
+		--primary-text: #eee;
+		--secondary-text: #ccc;
+		--ternary-text: #aaa;
+	}
+}

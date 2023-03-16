@@ -1,3 +1,113 @@
-button {
-  font-size: 60px;
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__Button {
+	border: none;
+	position: relative;
+	width: max-content;
+	height: min-content;
+	white-space: nowrap;
+	border-radius: var(--round-m);
+
+	//styleName: text-sm/font-semibold;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+
+	// default dynamics styles
+	color: var(--primary-text);
+	background: var(--primary-color);
+	padding: var(--padding-m) var(--padding-xl);
+
+	// Type styles
+	&[data-type="primary"] {
+		color: white;
+		background: var(--primary-color);
+
+		&:hover {
+			filter: brightness(0.9);
+		}
+		&:active {
+			filter: brightness(1.2);
+		}
+		&:focus {
+			box-shadow: 0 0 0 2px var(--primary-bg), 0 0 0 4px var(--primary-color);
+		}
+		&:disabled {
+			background: #e1e7ef;
+			cursor: not-allowed;
+			color: white;
+			opacity: 50%;
+		}
+	}
+
+	&[data-type="secondary"] {
+		background: transparent;
+		color: var(--secondary-text);
+		border: 2px solid var(--secondary-bg);
+	}
+
+	&[data-type="ghost"] {
+		background: transparent;
+		color: var(--primary-color);
+		border: 2px solid var(--primary-color);
+
+		&:hover {
+			filter: brightness(0.9);
+		}
+		&:active {
+			filter: brightness(1.2);
+		}
+		&:focus {
+			box-shadow: 0 0 0 2px var(--primary-bg), 0 0 0 4px var(--primary-color);
+		}
+		&:disabled {
+			background: gray;
+			cursor: not-allowed;
+		}
+	}
+
+	&[data-type="danger"] {
+		color: var(--primary-text);
+		background: var(--danger-color);
+
+		&:hover {
+			filter: brightness(0.9);
+		}
+		&:active {
+			filter: brightness(1.2);
+		}
+		&:focus {
+			box-shadow: 0 0 0 2px var(--primary-bg), 0 0 0 4px var(--danger-color);
+		}
+		&:disabled {
+			background: gray;
+			cursor: not-allowed;
+		}
+	}
+
+	// Size styles
+	&[data-size="small"] {
+		font-size: 14px;
+		font-weight: 500;
+		padding: var(--padding-xs) var(--padding-m);
+	}
+
+	&[data-size="default"] {
+		font-size: 16px;
+		font-weight: 500;
+		padding: var(--padding-s) var(--padding-l);
+	}
+
+	&[data-size="medium"] {
+		font-size: 18px;
+		font-weight: 600;
+		padding: var(--padding-m) var(--padding-xl);
+	}
+
+	&[data-size="large"] {
+		font-size: 20px;
+		font-weight: 600;
+		padding: var(--padding-l) var(--padding-xxl);
+	}
 }

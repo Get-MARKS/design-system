@@ -1,1 +1,3 @@
-export { default } from "./Button";
+// Generated with util/createComponent.js
+    export { default } from "./Button";
+    
