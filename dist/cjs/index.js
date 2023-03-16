@@ -2817,8 +2817,8 @@ styleInject(css_248z);
 
 // Generated with util/createComponent.js
 var Button = function (props, ref) {
-    var children = props.children, disabled = props.disabled, _a = props.className, className = _a === void 0 ? "" : _a, _b = props.type, type = _b === void 0 ? "primary" : _b, _c = props.size, size = _c === void 0 ? "default" : _c, _d = props.loading, loading = _d === void 0 ? false : _d;
-    return (React.createElement("button", { type: "button", "data-type": type, "data-size": size, disabled: disabled, "data-loading": loading, className: "ds__Button ".concat(className), ref: ref }, children));
+    var onClick = props.onClick, disabled = props.disabled, _a = props.className, className = _a === void 0 ? "" : _a, _b = props.label, label = _b === void 0 ? "label" : _b, _c = props.type, type = _c === void 0 ? "primary" : _c, _d = props.size, size = _d === void 0 ? "default" : _d, _e = props.loading, loading = _e === void 0 ? false : _e;
+    return (React.createElement("button", { type: "button", "data-type": type, "data-size": size, onClick: onClick, disabled: disabled, "data-loading": loading, className: "ds__Button ".concat(className), ref: ref }, label));
 };
 var Button$1 = React.forwardRef(Button);
 

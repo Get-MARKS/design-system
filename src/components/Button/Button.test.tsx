@@ -28,6 +28,6 @@ import { ButtonProps } from "./Button.types";
 
 describe("Button", () => {
 	test("renders the Button component", () => {
-		render(<Button children="Test Button" />);
+		render(<Button label="Test Button" />);
 	});
 });

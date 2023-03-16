@@ -1,13 +1,15 @@
-import { ElementType, MouseEventHandler, ReactNode } from "react";
+import { ElementType, MouseEventHandler } from "react";
 export type ButtonType = "primary" | "secondary" | "ghost" | "danger";
 export type ButtonSize = "small" | "default" | "medium" | "large";
+export type Alignment = "left" | "right" | "top" | "bottom";
 export interface ButtonProps {
+    label?: string;
     size?: ButtonSize;
     type?: ButtonType;
     loading?: boolean;
     className?: string;
-    icon?: ElementType;
     disabled?: boolean;
-    children?: ReactNode;
+    icon?: ElementType;
+    alignIcon?: Alignment;
     onClick?: MouseEventHandler<HTMLButtonElement>;
 }

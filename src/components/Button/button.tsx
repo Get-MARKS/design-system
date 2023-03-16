@@ -7,9 +7,10 @@ import "./Button.scss";
 
 const Button: React.ForwardRefRenderFunction<unknown, ButtonProps> = (props, ref) => {
 	const {
-		children,
+		onClick,
 		disabled,
 		className = "",
+		label = "label",
 		type = "primary",
 		size = "default",
 		loading = false,
@@ -20,12 +21,13 @@ const Button: React.ForwardRefRenderFunction<unknown, ButtonProps> = (props, ref
 			type="button"
 			data-type={type}
 			data-size={size}
+			onClick={onClick}
 			disabled={disabled}
 			data-loading={loading}
 			className={`ds__Button ${className}`}
 			ref={ref as React.MutableRefObject<HTMLButtonElement>}
 		>
-			{children}
+			{label}
 		</button>
 	);
 };

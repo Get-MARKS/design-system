@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const DefaultButton = Template.bind({});
 DefaultButton.args = {
-	children: "Default Button",
+	label: "Default Button",
 	type: "primary",
 	size: "default",
 	loading: false,
@@ -22,37 +22,37 @@ DefaultButton.args = {
 
 export const PrimaryButton = Template.bind({});
 PrimaryButton.args = {
-	children: "Primary Button",
+	label: "Primary Button",
 	type: "primary",
 };
 
 export const SecondaryButton = Template.bind({});
 SecondaryButton.args = {
-	children: "Secondary Button",
+	label: "Secondary Button",
 	type: "secondary",
 };
 
 export const GhostButton = Template.bind({});
 GhostButton.args = {
-	children: "Ghost Button",
+	label: "Ghost Button",
 	type: "ghost",
 };
 
 export const DangerButton = Template.bind({});
 DangerButton.args = {
-	children: "Danger Button",
+	label: "Danger Button",
 	type: "danger",
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-	children: "Disabled Button",
+	label: "Disabled Button",
 	disabled: true,
 };
 
 export const Loading = Template.bind({});
 Loading.args = {
-	children: "Button",
+	label: "Button",
 	loading: true,
 };
 
@@ -66,69 +66,35 @@ export const Sizes = () => {
 	return (
 		<Fragment>
 			<div style={gridStyle}>
-				<Button type="primary" size="large">
-					Large
-				</Button>
-				<Button type="primary" size="medium">
-					Medium
-				</Button>
-				<Button type="primary" size="default">
-					Default
-				</Button>
-				<Button type="primary" size="small">
-					Small
-				</Button>
+				<Button type="primary" size="large" />
+				<Button type="primary" size="medium" />
+				<Button type="primary" size="default" />
+				<Button type="primary" size="small" />
 			</div>
 
 			<div style={gridStyle}>
-				<Button type="secondary" size="large">
-					Large
-				</Button>
-				<Button type="secondary" size="medium">
-					Medium
-				</Button>
-				<Button type="secondary" size="default">
-					Default
-				</Button>
-				<Button type="secondary" size="small">
-					Small
-				</Button>
+				<Button type="secondary" size="large" />
+				<Button type="secondary" size="medium" />
+				<Button type="secondary" size="default" />
+				<Button type="secondary" size="small" />
 			</div>
 
 			<div style={gridStyle}>
-				<Button type="ghost" size="large">
-					Large
-				</Button>
-				<Button type="ghost" size="medium">
-					Medium
-				</Button>
-				<Button type="ghost" size="default">
-					Default
-				</Button>
-				<Button type="ghost" size="small">
-					Small
-				</Button>
+				<Button type="ghost" size="large" />
+				<Button type="ghost" size="medium" />
+				<Button type="ghost" size="default" />
+				<Button type="ghost" size="small" />
 			</div>
 			<div style={gridStyle}>
-				<Button type="danger" size="large">
-					Large
-				</Button>
-				<Button type="danger" size="medium">
-					Medium
-				</Button>
-				<Button type="danger" size="default">
-					Default
-				</Button>
-				<Button type="danger" size="small">
-					Small
-				</Button>
+				<Button type="danger" size="large" />
+				<Button type="danger" size="medium" />
+				<Button type="danger" size="default" />
+				<Button type="danger" size="small" />
 			</div>
 			<div style={gridStyle}>
-				<Button loading={true}>Loading Button</Button>
-				<Button disabled={true}>Disabled button</Button>
-				<Button disabled={true} loading={true}>
-					Submitting
-				</Button>
+				<Button loading={true} />
+				<Button disabled={true} />
+				<Button disabled={true} loading={true} />
 			</div>
 		</Fragment>
 	);
