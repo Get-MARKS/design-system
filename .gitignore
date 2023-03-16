@@ -1,2 +1,5 @@
 node_modules
 .vscode
+
+util/figmaVariables.json
+util/setupVariables.js
