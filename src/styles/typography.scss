@@ -1,0 +1,208 @@
+$line-height-0: 16px;
+$line-height-1: 20px;
+$line-height-2: 24px;
+$line-height-3: 30px;
+$line-height-4: 32px;
+$line-height-5: 34px;
+$line-height-6: 42px;
+$line-height-7: 52px;
+$line-height-8: 58px;
+$line-height-9: 86px;
+$line-height-10: 108px;
+$line-height-11: 144px;
+$line-height-12: 192px;
+
+// $line-height-0: 14px;
+// $line-height-1: 16px;
+// $line-height-2: 18px;
+// $line-height-3: 20px;
+// $line-height-4: 22px;
+// $line-height-5: 26px;
+// $line-height-6: 32px;
+// $line-height-7: 38px;
+// $line-height-8: 50px;
+// $line-height-9: 62px;
+// $line-height-10: 74px;
+// $line-height-11: 98px;
+// $line-height-12: 130px;
+
+$font-thin: 100;
+$font-lighter: 200;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-bolder: 800;
+$font-black: 900;
+
+$font-size-0: 12px;
+$font-size-1: 14px;
+$font-size-2: 16px;
+$font-size-3: 18px;
+$font-size-4: 20px;
+$font-size-5: 24px;
+$font-size-6: 30px;
+$font-size-7: 36px;
+$font-size-8: 48px;
+$font-size-9: 60px;
+$font-size-10: 72px;
+$font-size-11: 96px;
+$font-size-12: 128px;
+
+@mixin text-xs($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-0;
+	line-height: $line-height-0;
+}
+@mixin text-base($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-1;
+	line-height: $line-height-1;
+}
+@mixin text-sm($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-2;
+	line-height: $line-height-2;
+}
+@mixin text-lg($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-3;
+	line-height: $line-height-3;
+}
+@mixin text-xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-4;
+	line-height: $line-height-4;
+}
+@mixin text-2xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-5;
+	line-height: $line-height-5;
+}
+@mixin text-3xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-6;
+	line-height: $line-height-6;
+}
+@mixin text-4xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-7;
+	line-height: $line-height-7;
+}
+@mixin text-5xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-8;
+	line-height: $line-height-8;
+}
+@mixin text-6xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-9;
+	line-height: $line-height-9;
+}
+@mixin text-7xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-10;
+	line-height: $line-height-10;
+}
+@mixin text-8xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-11;
+	line-height: $line-height-11;
+}
+@mixin text-9xl($weight: 400, $align: left) {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	font-style: normal;
+	letter-spacing: 0%;
+	text-align: $align;
+	font-weight: $weight;
+	text-transform: none;
+	text-decoration: none;
+	font-size: $font-size-12;
+	line-height: $line-height-12;
+}
