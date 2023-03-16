@@ -1,3 +1,33 @@
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css_248z$1 = ":root {\n  --round-xs: 2px;\n  --round-s: 4px;\n  --round-m: 8px;\n  --round-l: 12px;\n  --round-xl: 16px;\n  --round-xxl: 20px;\n  --padding-xxs: 2px;\n  --padding-xs: 4px;\n  --padding-s: 8px;\n  --padding-m: 12px;\n  --padding-l: 16px;\n  --padding-xl: 20px;\n  --padding-xxl: 24px;\n  --text-xxs: 10px;\n  --text-xs: 12px;\n  --text-s: 14px;\n  --text-m: 16px;\n  --text-l: 18px;\n  --text-xl: 20px;\n  --text-xxl: 24px;\n  --primary-bg: #eee;\n  --secondary-bg: #ddd;\n  --ternary-bg: #ccc;\n  --primary-text: #111;\n  --secondary-text: #333;\n  --ternary-text: #555;\n  --primary-color: blue;\n  --secondary-color: green;\n  --ternary-color: yellow;\n  --danger-color: red;\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --primary-bg: #111;\n    --secondary-bg: #222;\n    --ternary-bg: #333;\n    --primary-text: #eee;\n    --secondary-text: #ccc;\n    --ternary-text: #aaa;\n  }\n}\n* {\n  box-sizing: border-box;\n  outline: none;\n  padding: 0;\n  margin: 0;\n}\n\n@media (prefers-color-scheme: dark) {\n  html {\n    color-scheme: dark;\n  }\n}";
+styleInject(css_248z$1);
+
 var react = {exports: {}};
 
 var react_production_min = {};
@@ -2778,39 +2808,15 @@ if (process.env.NODE_ENV === 'production') {
 
 var React = react.exports;
 
-function styleInject(css, ref) {
-  if ( ref === void 0 ) ref = {};
-  var insertAt = ref.insertAt;
-
-  if (!css || typeof document === 'undefined') { return; }
-
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
-  style.type = 'text/css';
-
-  if (insertAt === 'top') {
-    if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
-    } else {
-      head.appendChild(style);
-    }
-  } else {
-    head.appendChild(style);
-  }
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var css_248z = "button {\n  font-size: 60px;\n}";
+var css_248z = ":root {\n  --round-xs: 2px;\n  --round-s: 4px;\n  --round-m: 8px;\n  --round-l: 12px;\n  --round-xl: 16px;\n  --round-xxl: 20px;\n  --padding-xxs: 2px;\n  --padding-xs: 4px;\n  --padding-s: 8px;\n  --padding-m: 12px;\n  --padding-l: 16px;\n  --padding-xl: 20px;\n  --padding-xxl: 24px;\n  --text-xxs: 10px;\n  --text-xs: 12px;\n  --text-s: 14px;\n  --text-m: 16px;\n  --text-l: 18px;\n  --text-xl: 20px;\n  --text-xxl: 24px;\n  --primary-bg: #eee;\n  --secondary-bg: #ddd;\n  --ternary-bg: #ccc;\n  --primary-text: #111;\n  --secondary-text: #333;\n  --ternary-text: #555;\n  --primary-color: blue;\n  --secondary-color: green;\n  --ternary-color: yellow;\n  --danger-color: red;\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --primary-bg: #111;\n    --secondary-bg: #222;\n    --ternary-bg: #333;\n    --primary-text: #eee;\n    --secondary-text: #ccc;\n    --ternary-text: #aaa;\n  }\n}\n* {\n  box-sizing: border-box;\n  outline: none;\n  padding: 0;\n  margin: 0;\n}\n\n@media (prefers-color-scheme: dark) {\n  html {\n    color-scheme: dark;\n  }\n}\n.ds__Button {\n  border: none;\n  position: relative;\n  width: max-content;\n  height: min-content;\n  white-space: nowrap;\n  border-radius: var(--round-m);\n  line-height: 20px;\n  letter-spacing: 0em;\n  text-align: center;\n  color: var(--primary-text);\n  background: var(--primary-color);\n  padding: var(--padding-m) var(--padding-xl);\n}\n.ds__Button[data-type=primary] {\n  color: white;\n  background: var(--primary-color);\n}\n.ds__Button[data-type=primary]:hover {\n  filter: brightness(0.9);\n}\n.ds__Button[data-type=primary]:active {\n  filter: brightness(1.2);\n}\n.ds__Button[data-type=primary]:focus {\n  box-shadow: 0 0 0 2px var(--primary-bg), 0 0 0 4px var(--primary-color);\n}\n.ds__Button[data-type=primary]:disabled {\n  background: #e1e7ef;\n  cursor: not-allowed;\n  color: white;\n  opacity: 50%;\n}\n.ds__Button[data-type=secondary] {\n  background: transparent;\n  color: var(--secondary-text);\n  border: 2px solid var(--secondary-bg);\n}\n.ds__Button[data-type=ghost] {\n  background: transparent;\n  color: var(--primary-color);\n  border: 2px solid var(--primary-color);\n}\n.ds__Button[data-type=ghost]:hover {\n  filter: brightness(0.9);\n}\n.ds__Button[data-type=ghost]:active {\n  filter: brightness(1.2);\n}\n.ds__Button[data-type=ghost]:focus {\n  box-shadow: 0 0 0 2px var(--primary-bg), 0 0 0 4px var(--primary-color);\n}\n.ds__Button[data-type=ghost]:disabled {\n  background: gray;\n  cursor: not-allowed;\n}\n.ds__Button[data-type=danger] {\n  color: var(--primary-text);\n  background: var(--danger-color);\n}\n.ds__Button[data-type=danger]:hover {\n  filter: brightness(0.9);\n}\n.ds__Button[data-type=danger]:active {\n  filter: brightness(1.2);\n}\n.ds__Button[data-type=danger]:focus {\n  box-shadow: 0 0 0 2px var(--primary-bg), 0 0 0 4px var(--danger-color);\n}\n.ds__Button[data-type=danger]:disabled {\n  background: gray;\n  cursor: not-allowed;\n}\n.ds__Button[data-size=small] {\n  font-size: 14px;\n  font-weight: 500;\n  padding: var(--padding-xs) var(--padding-m);\n}\n.ds__Button[data-size=default] {\n  font-size: 16px;\n  font-weight: 500;\n  padding: var(--padding-s) var(--padding-l);\n}\n.ds__Button[data-size=medium] {\n  font-size: 18px;\n  font-weight: 600;\n  padding: var(--padding-m) var(--padding-xl);\n}\n.ds__Button[data-size=large] {\n  font-size: 20px;\n  font-weight: 600;\n  padding: var(--padding-l) var(--padding-xxl);\n}";
 styleInject(css_248z);
 
-var Button = function (props) {
-    return React.createElement("button", { type: "button" }, props.label);
+// Generated with util/createComponent.js
+var Button = function (props, ref) {
+    var children = props.children, disabled = props.disabled, _a = props.className, className = _a === void 0 ? "" : _a, _b = props.type, type = _b === void 0 ? "primary" : _b, _c = props.size, size = _c === void 0 ? "default" : _c, _d = props.loading, loading = _d === void 0 ? false : _d;
+    return (React.createElement("button", { type: "button", "data-type": type, "data-size": size, disabled: disabled, "data-loading": loading, className: "ds__Button ".concat(className), ref: ref }, children));
 };
+var Button$1 = React.forwardRef(Button);
 
-export { Button };
+export { Button$1 as Button };
 //# sourceMappingURL=index.js.map

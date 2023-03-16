@@ -1,6 +1,12 @@
-/// <reference types="react" />
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-declare const _default: ComponentMeta<(props: import("./Button").ButtonProps) => JSX.Element>;
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from "react";
+declare const _default: ComponentMeta<React.ForwardRefExoticComponent<import("./Button.types").ButtonProps & React.RefAttributes<unknown>>>;
 export default _default;
-export declare const HelloWorld: ComponentStory<(props: import("./Button").ButtonProps) => JSX.Element>;
-export declare const ClickMe: ComponentStory<(props: import("./Button").ButtonProps) => JSX.Element>;
+export declare const DefaultButton: ComponentStory<React.ForwardRefExoticComponent<import("./Button.types").ButtonProps & React.RefAttributes<unknown>>>;
+export declare const PrimaryButton: ComponentStory<React.ForwardRefExoticComponent<import("./Button.types").ButtonProps & React.RefAttributes<unknown>>>;
+export declare const SecondaryButton: ComponentStory<React.ForwardRefExoticComponent<import("./Button.types").ButtonProps & React.RefAttributes<unknown>>>;
+export declare const GhostButton: ComponentStory<React.ForwardRefExoticComponent<import("./Button.types").ButtonProps & React.RefAttributes<unknown>>>;
+export declare const DangerButton: ComponentStory<React.ForwardRefExoticComponent<import("./Button.types").ButtonProps & React.RefAttributes<unknown>>>;
+export declare const Disabled: ComponentStory<React.ForwardRefExoticComponent<import("./Button.types").ButtonProps & React.RefAttributes<unknown>>>;
+export declare const Loading: ComponentStory<React.ForwardRefExoticComponent<import("./Button.types").ButtonProps & React.RefAttributes<unknown>>>;
+export declare const Sizes: () => JSX.Element;

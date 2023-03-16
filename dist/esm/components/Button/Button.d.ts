@@ -1,7 +1,5 @@
-/// <reference types="react" />
+import React from "react";
+import { ButtonProps } from "./Button.types";
 import "./Button.scss";
-export interface ButtonProps {
-    label: string;
-}
-declare const Button: (props: ButtonProps) => JSX.Element;
-export default Button;
+declare const _default: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<unknown>>;
+export default _default;
