@@ -8,10 +8,10 @@
 	"scripts": {
 		"test": "jest",
 		"rollup": "rollup -c",
-		"build-storybook": "build-storybook",
 		"storybook": "start-storybook -p 6006",
 		"generate": "node ./util/createComponent",
-		"serve-storybook": "serve storybook-static"
+		"serve-storybook": "serve storybook-static",
+		"build-storybook": "build-storybook -o docs-build -s ./src/stories/assets"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.16.0",
