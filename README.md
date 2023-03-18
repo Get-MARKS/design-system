@@ -1,4 +1,4 @@
-# MathOnGo Design System
+# MARKS Design System
 
 ## Available Scripts
 
