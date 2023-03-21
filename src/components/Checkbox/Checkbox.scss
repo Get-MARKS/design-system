@@ -1,0 +1,72 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__Checkbox {
+	border: none;
+	display: flex;
+	position: relative;
+	width: max-content;
+	height: max-content;
+	align-items: center;
+	box-sizing: border-box;
+	border-radius: var(--round-m);
+	background: transparent;
+
+	&[data-type="fill"] {
+		background: var(--tertiary-50);
+		border: 1px solid var(--tertiary-200);
+	}
+	&[data-type="line"] {
+		border-radius: 0;
+		border-bottom: 2px solid $primary-600-light;
+	}
+
+	&[data-align="left"] {
+		flex-direction: row-reverse;
+	}
+
+	// Default size
+	padding: var(--padding-m) var(--padding-l);
+	gap: 10px;
+
+	.ds__Checkbox__label {
+		@include text-sm(600);
+		color: var(--base-900);
+	}
+
+	.ds__Checkbox__input {
+		width: 18px;
+		height: 18px;
+		accent-color: $primary-600-light;
+
+		&:disabled + .ds__Checkbox__label {
+			color: var(--tertiary-500);
+		}
+	}
+
+	&[data-size="small"] {
+		gap: 8px;
+		padding: var(--padding-s) var(--padding-m);
+
+		.ds__Checkbox__label {
+			@include text-base(500);
+		}
+
+		.ds__Checkbox__input {
+			width: 16px;
+			height: 16px;
+		}
+	}
+	&[data-size="large"] {
+		gap: 14px;
+		padding: var(--padding-m) var(--padding-xl);
+
+		.ds__Checkbox__label {
+			@include text-lg(600);
+		}
+		.ds__Checkbox__input {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
