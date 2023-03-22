@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./shadow.scss";
 
 :root {
 	--round-xs: 2px;
@@ -15,6 +16,15 @@
 	--padding-l: 16px;
 	--padding-xl: 20px;
 	--padding-xxl: 24px;
+
+	--shadow-xs: #{$shadow-xs-light};
+	--shadow-sm: #{$shadow-sm-light};
+	--shadow-m: #{$shadow-m-light};
+	--shadow-lg: #{$shadow-lg-light};
+	--shadow-xl: #{$shadow-xl-light};
+	--shadow-2xl: #{$shadow-2xl-light};
+	--shadow-flat: #{$shadow-flat-light};
+	--shadow-in: #{$shadow-in-light};
 
 	--base-00: #{$base-00-light};
 	--base-50: #{$base-50-light};
@@ -224,6 +234,15 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		--shadow-xs: #{$shadow-xs-dark};
+		--shadow-sm: #{$shadow-sm-dark};
+		--shadow-m: #{$shadow-m-dark};
+		--shadow-lg: #{$shadow-lg-dark};
+		--shadow-xl: #{$shadow-xl-dark};
+		--shadow-2xl: #{$shadow-2xl-dark};
+		--shadow-flat: #{$shadow-flat-dark};
+		--shadow-in: #{$shadow-in-dark};
+
 		--base-00: #{$base-00-dark};
 		--base-50: #{$base-50-dark};
 		--base-100: #{$base-100-dark};
