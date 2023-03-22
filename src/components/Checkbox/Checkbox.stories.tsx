@@ -37,7 +37,7 @@ const gridStyle = {
 	marginBottom: "1rem",
 };
 
-export const Sizes = () => {
+export const allCheckboxes = () => {
 	return (
 		<Fragment>
 			<div style={gridStyle}>
