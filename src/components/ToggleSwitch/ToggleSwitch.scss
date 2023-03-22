@@ -1,0 +1,138 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__ToggleSwitch {
+	width: max-content;
+	height: max-content;
+	align-items: center;
+	box-sizing: border-box;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	border: none;
+	gap: 10px;
+
+	&[data-align="left"] {
+		flex-direction: row-reverse;
+	}
+
+	.ds__ToggleSwitch__label {
+		@include text-sm(600);
+		color: var(--base-900);
+	}
+
+	.ds__ToggleSwitch__input {
+		display: inline-block;
+		position: relative;
+		height: 24px;
+		width: 48px;
+
+		.ds__ToggleSwitch__slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 34px;
+			background-color: var(--tertiary-200);
+			-webkit-transition: 0.4s;
+			transition: 0.4s;
+
+			&::before {
+				position: absolute;
+				content: "";
+				left: 2px;
+				top: 2px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: white;
+				-webkit-transition: 0.4s;
+				transition: 0.4s;
+
+				box-shadow: $shadow-m-light;
+			}
+		}
+
+		input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+
+			&:checked + .ds__ToggleSwitch__slider {
+				background-color: $primary-600-light;
+
+				&::before {
+					-webkit-transform: translateX(24px);
+					-ms-transform: translateX(24px);
+					transform: translateX(24px);
+				}
+			}
+
+			&:focus + .ds__ToggleSwitch__slider {
+				box-shadow: 0 0 1px $primary-600-light;
+			}
+
+			&:disabled + .ds__ToggleSwitch__slider {
+				background-color: var(--tertiary-200);
+
+				&::before {
+					background-color: var(--tertiary-500);
+				}
+			}
+		}
+	}
+
+	&[data-size="small"] {
+		gap: 8px;
+
+		.ds__ToggleSwitch__label {
+			@include text-base(500);
+		}
+
+		.ds__ToggleSwitch__input {
+			width: 40px;
+			height: 18px;
+
+			.ds__ToggleSwitch__slider::before {
+				border-radius: 17px;
+				height: 12px;
+				width: 18px;
+				top: 3px;
+				left: 3px;
+			}
+
+			input:checked + .ds__ToggleSwitch__slider::before {
+				-webkit-transform: translateX(16px);
+				-ms-transform: translateX(16px);
+				transform: translateX(16px);
+			}
+		}
+	}
+	&[data-size="large"] {
+		gap: 14px;
+
+		.ds__ToggleSwitch__label {
+			@include text-lg(600);
+		}
+		.ds__ToggleSwitch__input {
+			width: 56px;
+			height: 32px;
+
+			.ds__ToggleSwitch__slider::before {
+				height: 24px;
+				width: 24px;
+				left: 4px;
+				top: 4px;
+			}
+
+			input:checked + .ds__ToggleSwitch__slider::before {
+				-webkit-transform: translateX(24px);
+				-ms-transform: translateX(24px);
+				transform: translateX(24px);
+			}
+		}
+	}
+}
