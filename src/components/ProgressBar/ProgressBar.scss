@@ -1,0 +1,49 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__ProgressBar {
+	width: 100%;
+	display: flex;
+	position: relative;
+	align-items: center;
+	gap: 10px;
+
+	.ds__ProgressBar__bar {
+		flex: 1;
+		height: 6px;
+		overflow: hidden;
+		border-radius: 8px;
+		background-color: var(--base-50);
+
+		span {
+			height: 100%;
+			display: block;
+			background-color: var(--primary-600);
+		}
+	}
+	.ds__ProgressBar__label {
+		@include text-sm(600);
+		color: var(--blue-grey-700);
+	}
+
+	&[data-size="small"] {
+		gap: 8px;
+		.ds__ProgressBar__bar {
+			height: 4px;
+		}
+
+		.ds__ProgressBar__label {
+			@include text-xs(500);
+		}
+	}
+	&[data-size="large"] {
+		gap: 12px;
+		.ds__ProgressBar__bar {
+			height: 8px;
+		}
+
+		.ds__ProgressBar__label {
+			@include text-lg(600);
+		}
+	}
+}
