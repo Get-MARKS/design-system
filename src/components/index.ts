@@ -4,3 +4,4 @@ export { default as ToggleSwitch } from "./ToggleSwitch";
 export { default as Tooltip } from "./Tooltip";
 export { default as Radio } from "./Radio";
 export { default as ProgressBar } from "./ProgressBar";
+export { default as ProgressRadial } from "./ProgressRadial";
