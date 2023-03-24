@@ -6,3 +6,4 @@ export { default as Radio } from "./Radio";
 export { default as ProgressBar } from "./ProgressBar";
 export { default as ProgressRadial } from "./ProgressRadial";
 export { default as Stepper } from "./Stepper";
+export { default as Scollbar } from "./Scollbar";
