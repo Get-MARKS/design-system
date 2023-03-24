@@ -7,3 +7,4 @@ export { default as ProgressBar } from "./ProgressBar";
 export { default as ProgressRadial } from "./ProgressRadial";
 export { default as Stepper } from "./Stepper";
 export { default as Scollbar } from "./Scollbar";
+export { default as Dropdown } from "./Dropdown";
