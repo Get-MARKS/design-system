@@ -1,0 +1,101 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__Stepper {
+	position: relative;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	height: max-content;
+	width: max-content;
+
+	.ds__Stepper__base {
+		width: 26px;
+		height: 26px;
+		display: flex;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--tertiary-300);
+
+		.ring {
+			width: 12px;
+			height: 12px;
+			display: block;
+			border-radius: 50%;
+			background-color: transparent;
+			border: 2px solid var(--base-500);
+		}
+	}
+
+	.ds__Stepper__info {
+		color: var(--base-500);
+		flex-direction: column;
+		display: flex;
+
+		.ds__Stepper__label {
+			// width: max-content;
+			@include text-lg(500);
+		}
+		.ds__Stepper__caption {
+			// width: max-content;
+			@include text-base(500);
+		}
+	}
+
+	&[data-status="complete"] {
+		.ds__Stepper__base {
+			background-color: var(--primary-600);
+
+			.icon {
+				width: 20px;
+				height: 20px;
+				path {
+					fill: white;
+				}
+			}
+		}
+	}
+	.ds__Stepper__info {
+		color: var(--base-700);
+	}
+
+	&[data-status="current"] {
+		.ds__Stepper__base {
+			background-color: var(--primary-600);
+
+			.circle {
+				width: 12px;
+				height: 12px;
+				display: block;
+				border-radius: 50%;
+				background-color: white;
+			}
+		}
+	}
+	.ds__Stepper__info {
+		color: var(--base-700);
+	}
+
+	&[data-dir="top"] {
+		flex-direction: column-reverse;
+		.ds__Stepper__info {
+			align-items: center;
+		}
+	}
+
+	&[data-dir="left"] {
+		flex-direction: row-reverse;
+		.ds__Stepper__label,
+		.ds__Stepper__caption {
+			text-align: end;
+		}
+	}
+
+	&[data-dir="bottom"] {
+		flex-direction: column;
+		.ds__Stepper__info {
+			align-items: center;
+		}
+	}
+}
