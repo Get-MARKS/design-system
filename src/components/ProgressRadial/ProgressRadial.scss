@@ -1,0 +1,116 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__ProgressRadial {
+	position: relative;
+	height: 100px;
+	width: 100px;
+
+	.ds__ProgressRadial__ring {
+		width: 100%;
+		height: 100%;
+
+		.fg {
+			stroke-width: 12px;
+			stroke: var(--primary-600);
+		}
+
+		.bg {
+			stroke-width: 12px;
+			stroke: var(--base-50);
+		}
+	}
+	.ds__ProgressRadial__info {
+		top: 50%;
+		left: 50%;
+		display: grid;
+		display: flex;
+		position: absolute;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		transform: translate(-50%, -50%);
+
+		.icon {
+			width: 24px;
+			height: 24px;
+			path {
+				fill: var(--base-50);
+			}
+		}
+
+		.label {
+			@include text-xs(500);
+		}
+
+		.progress {
+			@include text-base(500);
+		}
+	}
+
+	&[data-status="success"] {
+		.ds__ProgressRadial__ring {
+			.fg {
+				stroke: var(--success-500);
+			}
+		}
+		.ds__ProgressRadial__info {
+			.icon path {
+				fill: var(--success-500);
+			}
+			.label {
+				color: var(--success-500);
+			}
+		}
+	}
+	&[data-status="error"] {
+		.ds__ProgressRadial__ring {
+			.fg {
+				stroke: var(--warning-500);
+			}
+		}
+		.ds__ProgressRadial__info {
+			.icon path {
+				fill: var(--warning-500);
+			}
+			.label {
+				color: var(--warning-500);
+			}
+		}
+	}
+
+	&[data-size="small"] {
+		width: 80px;
+		height: 80px;
+
+		.ds__ProgressRadial__info {
+			.icon {
+				width: 20px;
+				height: 20px;
+			}
+			.label {
+				@include text-xs(500);
+			}
+			.progress {
+				@include text-base(500);
+			}
+		}
+	}
+	&[data-size="large"] {
+		width: 120px;
+		height: 120px;
+
+		.ds__ProgressRadial__info {
+			.icon {
+				width: 28px;
+				height: 28px;
+			}
+			.label {
+				@include text-base(500);
+			}
+			.progress {
+				@include text-lg(500);
+			}
+		}
+	}
+}

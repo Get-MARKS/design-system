@@ -1,0 +1,142 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__Tooltip {
+	@include text-sm;
+	width: max-content;
+	position: relative;
+	color: var(--base-900);
+	padding: var(--padding-s) var(--padding-l);
+	border: 1px solid var(--tertiary-300);
+	background-color: var(--tertiary-50);
+	border-radius: var(--round-m);
+
+	&[data-direction="top"] {
+		&::before {
+			top: -7.5px;
+			left: 50%;
+			width: 0;
+			height: 0;
+			content: "";
+			position: absolute;
+			transform: translateX(-50%);
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid var(--tertiary-300);
+		}
+
+		&::after {
+			top: -6px;
+			left: 50%;
+			width: 0;
+			height: 0;
+			content: "";
+			position: absolute;
+			transform: translateX(-50%);
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid var(--tertiary-50);
+		}
+	}
+
+	&[data-direction="bottom"] {
+		&::before {
+			bottom: -7.5px;
+			left: 50%;
+			width: 0;
+			height: 0;
+			content: "";
+			position: absolute;
+			transform: translateX(-50%);
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-top: 7px solid var(--tertiary-300);
+		}
+
+		&::after {
+			bottom: -6px;
+			left: 50%;
+			width: 0;
+			height: 0;
+			content: "";
+			position: absolute;
+			transform: translateX(-50%);
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-top: 7px solid var(--tertiary-50);
+		}
+	}
+
+	&[data-direction="left"] {
+		&::before {
+			top: 50%;
+			left: -7.5px;
+			width: 0;
+			height: 0;
+			content: "";
+			position: absolute;
+			transform: translateY(-50%);
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+			border-right: 7px solid var(--tertiary-300);
+		}
+
+		&::after {
+			top: 50%;
+			left: -6px;
+			width: 0;
+			height: 0;
+			content: "";
+			position: absolute;
+			transform: translateY(-50%);
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+			border-right: 7px solid var(--tertiary-50);
+		}
+	}
+
+	&[data-direction="right"] {
+		&::before {
+			top: 50%;
+			right: -7.5px;
+			width: 0;
+			height: 0;
+			content: "";
+			position: absolute;
+			transform: translateY(-50%);
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+			border-left: 7px solid var(--tertiary-300);
+		}
+
+		&::after {
+			top: 50%;
+			right: -6px;
+			width: 0;
+			height: 0;
+			content: "";
+			position: absolute;
+			transform: translateY(-50%);
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+			border-left: 7px solid var(--tertiary-50);
+		}
+	}
+
+	&[data-direction="top"][data-placement="left"],
+	&[data-direction="bottom"][data-placement="left"] {
+		&::after,
+		&::before {
+			right: auto;
+			left: 24px;
+		}
+	}
+	&[data-direction="top"][data-placement="right"],
+	&[data-direction="bottom"][data-placement="right"] {
+		&::after,
+		&::before {
+			left: auto;
+			right: 7px;
+		}
+	}
+}
