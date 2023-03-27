@@ -1,0 +1,63 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__Breadcrumbs {
+	position: relative;
+	width: max-content;
+	display: flex;
+	gap: 12px;
+
+	.ds__Breadcrumbs__item {
+		gap: 12px;
+		display: flex;
+		align-items: center;
+
+		.ds__Breadcrumbs__text {
+			@include text-lg(500);
+			color: var(--blue-gray-700);
+		}
+		.ds__Breadcrumbs__icon {
+			width: 6px;
+			height: 10px;
+			path {
+				fill: var(--tertiary-400);
+			}
+		}
+
+		&:last-child {
+			.ds__Breadcrumbs__text {
+				color: var(--tertiary-500);
+			}
+			.ds__Breadcrumbs__icon {
+				display: none;
+			}
+		}
+	}
+
+	&[data-size="small"] {
+		gap: 8px;
+		.ds__Breadcrumbs__item {
+			gap: 8px;
+			.ds__Breadcrumbs__text {
+				@include text-base(500);
+			}
+			.ds__Breadcrumbs__icon {
+				width: 5px;
+				height: 8px;
+			}
+		}
+	}
+	&[data-size="large"] {
+		gap: 16px;
+		.ds__Breadcrumbs__item {
+			gap: 16px;
+			.ds__Breadcrumbs__text {
+				@include text-xl(500);
+			}
+			.ds__Breadcrumbs__icon {
+				width: 7px;
+				height: 12px;
+			}
+		}
+	}
+}

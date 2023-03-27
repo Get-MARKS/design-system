@@ -9,3 +9,5 @@ export { default as Stepper } from "./Stepper";
 export { default as Scollbar } from "./Scollbar";
 export { default as Dropdown } from "./Dropdown";
 export { default as Chip } from "./Chip";
+export { default as Breadcrumbs } from "./Breadcrumbs";
+export { default as Notification } from "./Notification";

@@ -1,0 +1,57 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__Notification {
+	width: 472px;
+	position: relative;
+	padding: var(--padding-xl);
+	box-shadow: var(--shadow-sm);
+	border-radius: var(--round-m);
+	background-color: var(--tertiary-50);
+	border: 1px solid var(--tertiary-200);
+	display: flex;
+	gap: 18px;
+
+	.ds__Notification__icon {
+		.icon,
+		.img {
+			width: 20px;
+			height: 20px;
+			display: block;
+			svg {
+				width: 100%;
+				padding: 100%;
+			}
+		}
+	}
+
+	.ds__Notification__text {
+		display: grid;
+		gap: 12px;
+		flex: 1;
+
+		.ds__Notification__title {
+			text-overflow: ellipsis;
+			color: var(--base-900);
+			@include text-lg(500);
+			white-space: nowrap;
+			line-height: 20px;
+			overflow: hidden;
+		}
+		.ds__Notification__caption {
+			color: var(--base-900);
+			@include text-base(400);
+		}
+	}
+	.close {
+		cursor: pointer;
+		.close-icon {
+			width: 24px;
+			height: 24px;
+			display: block;
+			path {
+				fill: var(--base-300);
+			}
+		}
+	}
+}
