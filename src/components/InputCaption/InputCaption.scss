@@ -1,0 +1,76 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__InputCaption {
+	gap: 8px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	@include text-base(500);
+	color: var(--base-700);
+	width: max-content;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		display: block;
+	}
+
+	&[data-type="success"] {
+		color: var(--success-600);
+		svg path {
+			fill: var(--success-600);
+		}
+	}
+
+	&[data-type="info"] {
+		color: var(--base-700);
+		svg path {
+			fill: var(--base-400);
+		}
+	}
+
+	&[data-type="error"] {
+		color: var(--warning-500);
+		svg path {
+			fill: var(--warning-500);
+		}
+	}
+
+	&[data-type="password"] {
+		svg path {
+			fill: var(--tertiary-500);
+		}
+	}
+
+	&[data-type="passwordState"] {
+		color: var(--success-600);
+
+		.progress {
+			display: flex;
+			gap: 4px;
+
+			.bar {
+				width: 24px;
+				height: 4px;
+				display: block;
+				border-radius: 6px;
+				background-color: var(--tertiary-300);
+
+				&[data-active="true"] {
+					background-color: var(--success-600);
+				}
+			}
+		}
+	}
+
+	&[data-size="large"] {
+		@include text-lg(500);
+		gap: 12;
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
