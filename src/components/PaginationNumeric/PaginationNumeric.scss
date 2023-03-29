@@ -1,0 +1,82 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__PaginationNumeric {
+	gap: 12px;
+	width: 100%;
+	display: flex;
+	position: relative;
+	align-items: center;
+
+	.ds__PaginationNumeric__prev,
+	.ds__PaginationNumeric__next {
+		padding: var(--padding-m);
+		box-shadow: var(--shadow-xs);
+		background-color: var(--tertiary-50);
+		border: 1px solid var(--tertiary-200);
+		border-radius: var(--round-m);
+		cursor: pointer;
+
+		svg {
+			width: 24px;
+			height: 24px;
+			display: block;
+			path {
+				fill: var(--blue-gray-700);
+			}
+		}
+
+		&:disabled {
+			svg path {
+				fill: var(--tertiary-400);
+			}
+		}
+	}
+
+	.ds__PaginationNumeric__num {
+		height: 32px;
+		display: flex;
+		min-width: 32px;
+		cursor: pointer;
+		align-items: center;
+		color: var(--base-500);
+		justify-content: center;
+		border-radius: var(--round-m);
+		padding: 0 var(--padding-s);
+		@include text-sm(500);
+
+		&:hover {
+			color: var(--base-900);
+			background-color: var(--tertiary-100);
+		}
+
+		&[data-active="true"] {
+			color: var(--primary-700);
+			border: 1px solid var(--tertiary-200);
+		}
+	}
+
+	.ds__PaginationNumeric__dot {
+		width: 32px;
+		height: 32px;
+		display: flex;
+		cursor: not-allowed;
+		align-items: center;
+		color: var(--base-500);
+		justify-content: center;
+		border-radius: var(--round-m);
+	}
+
+	&[data-size="small"] {
+		gap: 8px;
+		.ds__PaginationNumeric__prev,
+		.ds__PaginationNumeric__next {
+			padding: var(--padding-s);
+		}
+		.ds__PaginationNumeric__num {
+			height: 32px;
+			min-width: 32px;
+			padding: 0 var(--padding-s);
+		}
+	}
+}
