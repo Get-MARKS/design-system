@@ -11,3 +11,5 @@ export { default as Dropdown } from "./Dropdown";
 export { default as Chip } from "./Chip";
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as Notification } from "./Notification";
+export { default as PaginationSteps } from "./PaginationSteps";
+export { default as PaginationNumeric } from "./PaginationNumeric";

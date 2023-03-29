@@ -1,0 +1,54 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__PaginationSteps {
+	height: 20px;
+	display: flex;
+	position: relative;
+	width: max-content;
+	align-items: center;
+	padding: 0 var(--padding-xxl);
+	border-radius: var(--round-xl);
+	background-color: var(--base-50);
+	justify-content: center;
+	gap: 12px;
+
+	.ds__PaginationSteps__step {
+		width: 12px;
+		height: 12px;
+		display: block;
+		border-radius: 50%;
+		background-color: var(--base-400);
+		&[data-active="true"] {
+			background-color: var(--primary-600);
+		}
+	}
+
+	&[data-size="small"] {
+		height: 12px;
+		.ds__PaginationSteps__step {
+			width: 8px;
+			height: 8px;
+		}
+	}
+
+	&[data-type="line"] {
+		gap: 6px;
+		width: 100%;
+		padding: var(--padding-m);
+
+		.ds__PaginationSteps__step {
+			flex: 1;
+			height: 6px;
+			border-radius: 6px;
+		}
+		&[data-size="small"] {
+			gap: 4px;
+			height: 12px;
+			padding: var(--padding-s);
+			.ds__PaginationSteps__step {
+				height: 4px;
+			}
+		}
+	}
+}
