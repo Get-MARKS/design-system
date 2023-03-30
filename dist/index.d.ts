@@ -15,7 +15,7 @@ interface ButtonProps {
     onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-declare const _default$a: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<unknown>>;
+declare const _default$g: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<unknown>>;
 
 type checkboxSize = "small" | "default" | "medium" | "large";
 type checkboxType = "fill" | "empty" | "line";
@@ -32,7 +32,7 @@ interface CheckboxProps {
     onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-declare const _default$9: React.ForwardRefExoticComponent<CheckboxProps & React.RefAttributes<unknown>>;
+declare const _default$f: React.ForwardRefExoticComponent<CheckboxProps & React.RefAttributes<unknown>>;
 
 type switchSize = "small" | "default" | "medium" | "large";
 type labelAlignment = "left" | "right";
@@ -48,7 +48,7 @@ interface ToggleSwitchProps {
     onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-declare const _default$8: React.ForwardRefExoticComponent<ToggleSwitchProps & React.RefAttributes<unknown>>;
+declare const _default$e: React.ForwardRefExoticComponent<ToggleSwitchProps & React.RefAttributes<unknown>>;
 
 interface TooltipProps {
     direction?: "top" | "bottom" | "left" | "right";
@@ -57,7 +57,7 @@ interface TooltipProps {
     content: string;
 }
 
-declare const _default$7: React.ForwardRefExoticComponent<TooltipProps & React.RefAttributes<unknown>>;
+declare const _default$d: React.ForwardRefExoticComponent<TooltipProps & React.RefAttributes<unknown>>;
 
 interface RadioProps {
     name: string;
@@ -71,14 +71,14 @@ interface RadioProps {
     onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-declare const _default$6: React.ForwardRefExoticComponent<RadioProps & React.RefAttributes<unknown>>;
+declare const _default$c: React.ForwardRefExoticComponent<RadioProps & React.RefAttributes<unknown>>;
 
 interface ProgressBarProps {
     size: "small" | "default" | "medium" | "large";
     percentage: number;
 }
 
-declare const _default$5: React.ForwardRefExoticComponent<ProgressBarProps & React.RefAttributes<unknown>>;
+declare const _default$b: React.ForwardRefExoticComponent<ProgressBarProps & React.RefAttributes<unknown>>;
 
 interface ProgressRadialProps {
     size: "small" | "default" | "medium" | "large";
@@ -86,7 +86,7 @@ interface ProgressRadialProps {
     percentage: number;
 }
 
-declare const _default$4: React.ForwardRefExoticComponent<ProgressRadialProps & React.RefAttributes<unknown>>;
+declare const _default$a: React.ForwardRefExoticComponent<ProgressRadialProps & React.RefAttributes<unknown>>;
 
 interface StepperProps {
     direction?: "top" | "bottom" | "left" | "right";
@@ -95,14 +95,14 @@ interface StepperProps {
     label?: string;
 }
 
-declare const _default$3: React.ForwardRefExoticComponent<StepperProps & React.RefAttributes<unknown>>;
+declare const _default$9: React.ForwardRefExoticComponent<StepperProps & React.RefAttributes<unknown>>;
 
 interface ScollbarProps {
     direction: "vertical" | "horizontal";
     size: number;
 }
 
-declare const _default$2: React.ForwardRefExoticComponent<ScollbarProps & React.RefAttributes<unknown>>;
+declare const _default$8: React.ForwardRefExoticComponent<ScollbarProps & React.RefAttributes<unknown>>;
 
 interface option {
     label: string;
@@ -115,7 +115,7 @@ interface DropdownProps {
     className?: string;
 }
 
-declare const _default$1: React.ForwardRefExoticComponent<DropdownProps & React.RefAttributes<unknown>>;
+declare const _default$7: React.ForwardRefExoticComponent<DropdownProps & React.RefAttributes<unknown>>;
 
 interface ChipProps {
     label: string;
@@ -126,6 +126,75 @@ interface ChipProps {
     onClick: MouseEventHandler<HTMLSpanElement>;
 }
 
-declare const _default: React.ForwardRefExoticComponent<ChipProps & React.RefAttributes<unknown>>;
+declare const _default$6: React.ForwardRefExoticComponent<ChipProps & React.RefAttributes<unknown>>;
 
-export { _default$a as Button, _default$9 as Checkbox, _default as Chip, _default$1 as Dropdown, _default$5 as ProgressBar, _default$4 as ProgressRadial, _default$6 as Radio, _default$2 as Scollbar, _default$3 as Stepper, _default$8 as ToggleSwitch, _default$7 as Tooltip };
+interface BreadcrumbsProps {
+    size?: "large" | "default" | "large";
+    content: Array<string>;
+}
+
+declare const _default$5: React.ForwardRefExoticComponent<BreadcrumbsProps & React.RefAttributes<unknown>>;
+
+interface NotificationProps {
+    title: string;
+    iconLoc?: string;
+    caption?: string;
+    icon?: ReactNode;
+    onClick?: MouseEventHandler<HTMLSpanElement>;
+}
+
+declare const _default$4: React.ForwardRefExoticComponent<NotificationProps & React.RefAttributes<unknown>>;
+
+interface PaginationStepsProps {
+    size?: "small" | "default" | "large";
+    type?: "dot" | "line";
+    currentStep: number;
+    totalSteps: number;
+}
+
+declare const _default$3: React.ForwardRefExoticComponent<PaginationStepsProps & React.RefAttributes<unknown>>;
+
+interface PaginationNumericProps {
+    size?: "default" | "small" | "large";
+    currentPage: number;
+    totalPages: number;
+}
+
+declare const _default$2: React.ForwardRefExoticComponent<PaginationNumericProps & React.RefAttributes<unknown>>;
+
+interface InputCaptionProps {
+    type: "default" | "success" | "error" | "info" | "password" | "passwordState";
+    size: "default" | "small" | "medium" | "large";
+    passwordState: number;
+    content: string;
+}
+
+declare const _default$1: React.ForwardRefExoticComponent<InputCaptionProps & React.RefAttributes<unknown>>;
+
+type modes = "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
+interface InputProps {
+    name: string;
+    type: string;
+    title: string;
+    label?: string;
+    pattern?: string;
+    inputMode?: modes;
+    tabIndex?: number;
+    required?: boolean;
+    disabled?: boolean;
+    minLenght?: number;
+    maxLenght?: number;
+    className?: string;
+    placeholder: string;
+    leftIcon?: ReactNode;
+    leftIconLoc?: string;
+    rightIcon?: ReactNode;
+    rightIconLoc?: string;
+    value?: string | number;
+    size?: "default" | "small" | "large";
+    onChange?: ChangeEventHandler<HTMLInputElement>;
+}
+
+declare const _default: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<unknown>>;
+
+export { _default$5 as Breadcrumbs, _default$g as Button, _default$f as Checkbox, _default$6 as Chip, _default$7 as Dropdown, _default as Input, _default$1 as InputCaption, _default$4 as Notification, _default$2 as PaginationNumeric, _default$3 as PaginationSteps, _default$b as ProgressBar, _default$a as ProgressRadial, _default$c as Radio, _default$8 as Scollbar, _default$9 as Stepper, _default$e as ToggleSwitch, _default$d as Tooltip };
