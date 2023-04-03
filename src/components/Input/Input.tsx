@@ -22,6 +22,9 @@ const Input: React.ForwardRefRenderFunction<unknown, InputProps> = (props, ref) 
 		rightIcon,
 		maxLenght,
 		minLenght,
+		onFocus,
+		onBlur,
+		readOnly,
 		leftIconLoc,
 		rightIconLoc,
 		type = "text",
@@ -58,11 +61,14 @@ const Input: React.ForwardRefRenderFunction<unknown, InputProps> = (props, ref) 
 				type={type}
 				title={title}
 				value={value}
+				onBlur={onBlur}
+				onFocus={onFocus}
 				pattern={pattern}
 				tabIndex={tabIndex}
 				required={required}
 				onChange={onChange}
 				disabled={disabled}
+				readOnly={readOnly}
 				inputMode={inputMode}
 				minLength={minLenght}
 				maxLength={maxLenght}
