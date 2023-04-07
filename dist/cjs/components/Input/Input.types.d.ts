@@ -1,4 +1,4 @@
-import { ChangeEventHandler, ReactNode } from "react";
+import { ChangeEventHandler, FocusEventHandler, ReactNode } from "react";
 type modes = "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
 export interface InputProps {
     name: string;
@@ -7,6 +7,7 @@ export interface InputProps {
     label?: string;
     pattern?: string;
     inputMode?: modes;
+    readOnly?: boolean;
     tabIndex?: number;
     required?: boolean;
     disabled?: boolean;
@@ -20,6 +21,8 @@ export interface InputProps {
     rightIconLoc?: string;
     value?: string | number;
     size?: "default" | "small" | "large";
+    onBlur?: FocusEventHandler<HTMLInputElement>;
+    onFocus?: FocusEventHandler<HTMLInputElement>;
     onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 export {};

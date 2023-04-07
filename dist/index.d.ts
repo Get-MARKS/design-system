@@ -1,4 +1,5 @@
-import React, { ElementType, MouseEventHandler, ChangeEventHandler, ReactNode } from 'react';
+/// <reference types="react" />
+import React, { ElementType, MouseEventHandler, ChangeEventHandler, ReactNode, FocusEventHandler } from 'react';
 
 type ButtonType = "primary" | "secondary" | "ghost" | "danger";
 type ButtonSize = "small" | "default" | "medium" | "large";
@@ -179,6 +180,7 @@ interface InputProps {
     label?: string;
     pattern?: string;
     inputMode?: modes;
+    readOnly?: boolean;
     tabIndex?: number;
     required?: boolean;
     disabled?: boolean;
@@ -192,9 +194,33 @@ interface InputProps {
     rightIconLoc?: string;
     value?: string | number;
     size?: "default" | "small" | "large";
+    onBlur?: FocusEventHandler<HTMLInputElement>;
+    onFocus?: FocusEventHandler<HTMLInputElement>;
     onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 declare const _default: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<unknown>>;
 
-export { _default$5 as Breadcrumbs, _default$g as Button, _default$f as Checkbox, _default$6 as Chip, _default$7 as Dropdown, _default as Input, _default$1 as InputCaption, _default$4 as Notification, _default$2 as PaginationNumeric, _default$3 as PaginationSteps, _default$b as ProgressBar, _default$a as ProgressRadial, _default$c as Radio, _default$8 as Scollbar, _default$9 as Stepper, _default$e as ToggleSwitch, _default$d as Tooltip };
+interface OptionProps {
+    value?: string | number;
+    label?: string | number;
+}
+interface SelectProps {
+    onChange?: ChangeEventHandler<HTMLInputElement>;
+    selectedOption?: OptionProps | null;
+    options: Array<OptionProps>;
+    searchable?: boolean;
+    leftIcon?: ReactNode;
+    leftIconLoc?: string;
+    placeholder: string;
+    disabled?: boolean;
+    required?: boolean;
+    label?: string;
+    title: string;
+    onSelect: any;
+    name: string;
+}
+
+declare const Select: (props: SelectProps) => JSX.Element;
+
+export { _default$5 as Breadcrumbs, _default$g as Button, _default$f as Checkbox, _default$6 as Chip, _default$7 as Dropdown, _default as Input, _default$1 as InputCaption, _default$4 as Notification, _default$2 as PaginationNumeric, _default$3 as PaginationSteps, _default$b as ProgressBar, _default$a as ProgressRadial, _default$c as Radio, _default$8 as Scollbar, Select, _default$9 as Stepper, _default$e as ToggleSwitch, _default$d as Tooltip };
