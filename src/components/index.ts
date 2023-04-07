@@ -13,3 +13,6 @@ export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as Notification } from "./Notification";
 export { default as PaginationSteps } from "./PaginationSteps";
 export { default as PaginationNumeric } from "./PaginationNumeric";
+export { default as InputCaption } from "./InputCaption";
+export { default as Input } from "./Input";
+export { default as Select } from "./Select";

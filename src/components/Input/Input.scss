@@ -1,0 +1,110 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__Input {
+	width: 100%;
+	height: 44px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	box-shadow: var(--shadow-sm);
+	border-radius: var(--round-m);
+	background-color: var(--base-00);
+	border: 1px solid var(--tertiary-200);
+	padding: var(--padding-s) var(--padding-l);
+	transition: all 200ms;
+	gap: var(--padding-l);
+
+	&:hover {
+		border-color: var(--blue-gray-500);
+		background-color: var(--tertiary-50);
+	}
+	&:focus-within {
+		border-color: var(--primary-600);
+		background-color: var(--tertiary-50);
+		box-shadow: 0 0 0 1px var(--primary-600), var(--shadow-sm);
+	}
+
+	.ds__Input__label {
+		@include text-sm(500);
+		color: var(--base-700);
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		white-space: nowrap;
+
+		.ds__Input__divider {
+			width: 1px;
+			height: 24px;
+			display: block;
+			background: var(--tertiary-200);
+		}
+	}
+
+	.left__icon,
+	.right__icon {
+		min-width: 20px;
+		min-height: 20px;
+		width: 20px;
+		height: 20px;
+		display: block;
+		overflow: hidden;
+		border-radius: 4px;
+		svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	}
+
+	.ds__Input__base {
+		all: unset;
+		width: 100%;
+		cursor: text;
+		@include text-sm(500);
+		color: var(--base-700);
+		caret-color: var(--primary-600);
+
+		&::placeholder {
+			@include text-sm(500);
+			color: var(--blue-gray-500);
+			line-height: 0;
+		}
+	}
+
+	&[data-size="small"] {
+		height: 36px;
+		.ds__Input__label {
+			@include text-base(500);
+		}
+		.ds__Input__base {
+			@include text-base(500);
+		}
+	}
+	&[data-size="large"] {
+		height: 58px;
+		.ds__Input__label {
+			@include text-lg(500);
+		}
+		.ds__Input__base {
+			@include text-lg(500);
+		}
+	}
+
+	&[data-disabled="true"] {
+		border: none;
+		box-shadow: none;
+		background-color: var(--tertiary-200);
+		.ds__Input__base {
+			color: var(--tertiary-400);
+			&::placeholder {
+				color: var(--tertiary-400);
+			}
+		}
+	}
+}

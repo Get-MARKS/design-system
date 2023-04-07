@@ -1,0 +1,103 @@
+// Generated with util/create-component.js
+@import "../../global.scss";
+
+.ds__Select {
+	position: relative;
+	min-width: 250px;
+	max-width: 100%;
+	width: 100%;
+
+	.ds__Select__btn {
+		width: 100%;
+		height: 44px;
+		display: flex;
+		position: relative;
+		align-items: center;
+		box-shadow: var(--shadow-sm);
+		border-radius: var(--round-m);
+		background-color: var(--base-00);
+		border: 1px solid var(--tertiary-200);
+		padding: var(--padding-s) var(--padding-l);
+		transition: all 200ms;
+		gap: var(--padding-l);
+
+		&:hover {
+			border-color: var(--blue-gray-500);
+			background-color: var(--tertiary-50);
+		}
+
+		.ds__btn__label {
+			display: flex;
+			@include text-sm(500);
+			color: var(--base-700);
+			color: var(--blue-gray-500);
+			align-items: center;
+			gap: 12px;
+
+			.ds__Input__divider {
+				width: 1px;
+				height: 24px;
+				display: block;
+				background: var(--tertiary-200);
+			}
+		}
+	}
+
+	.ds__Select__dropdown {
+		list-style: none;
+		position: relative;
+		background: var(--base-00);
+		padding-top: var(--padding-m);
+		padding-bottom: var(--padding-m);
+		border: 1px solid var(--base-100);
+		border-radius: var(--round-m);
+		box-shadow: var(--shadow-m);
+		width: max-content;
+		min-width: 250px;
+		max-width: 100%;
+		display: grid;
+		width: 100%;
+
+		overflow-y: auto;
+		overflow-x: hidden;
+
+		.ds__Select__item {
+			gap: 12px;
+			display: flex;
+			cursor: pointer;
+			align-items: center;
+			padding: var(--padding-s) var(--padding-l);
+
+			&:hover {
+				background-color: var(--tertiary-50);
+			}
+
+			&[data-active="true"] {
+				background-color: var(--tertiary-50);
+			}
+
+			.icon,
+			.img {
+				width: 20px;
+				height: 20px;
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.ds__item__label {
+				flex: 1;
+				color: var(--base-900);
+				@include text-base(500);
+			}
+		}
+
+		&[data-placement="top-start"] {
+			margin-bottom: 12px !important;
+		}
+		&[data-placement="bottom-start"] {
+			margin-top: 12px !important;
+		}
+	}
+}

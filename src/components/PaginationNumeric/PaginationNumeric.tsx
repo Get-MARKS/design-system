@@ -47,6 +47,7 @@ const PaginationNumeric: React.ForwardRefRenderFunction<unknown, PaginationNumer
 			{_.times(currentPage < 2 || totalPages - currentPage < 1 ? 4 : 3, (i) =>
 				currentPage < 2 ? (
 					<span
+						key={i}
 						className="ds__PaginationNumeric__num"
 						data-active={currentPage + i === currentPage}
 					>
@@ -54,6 +55,7 @@ const PaginationNumeric: React.ForwardRefRenderFunction<unknown, PaginationNumer
 					</span>
 				) : totalPages - currentPage < 1 ? (
 					<span
+						key={i}
 						className="ds__PaginationNumeric__num"
 						data-active={currentPage + i - 3 === currentPage}
 					>
@@ -61,6 +63,7 @@ const PaginationNumeric: React.ForwardRefRenderFunction<unknown, PaginationNumer
 					</span>
 				) : (
 					<span
+						key={i}
 						className="ds__PaginationNumeric__num"
 						data-active={currentPage + i - 1 === currentPage}
 					>
